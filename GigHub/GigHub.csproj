@@ -185,6 +185,10 @@
     <Compile Include="Migrations\201911082059344_OverridenConvventionsForGigandGenreClass.Designer.cs">
       <DependentUpon>201911082059344_OverridenConvventionsForGigandGenreClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911082119416_populateGenresTablewithDatainUpmethod.cs" />
+    <Compile Include="Migrations\201911082119416_populateGenresTablewithDatainUpmethod.Designer.cs">
+      <DependentUpon>201911082119416_populateGenresTablewithDatainUpmethod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -277,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911082059344_OverridenConvventionsForGigandGenreClass.resx">
       <DependentUpon>201911082059344_OverridenConvventionsForGigandGenreClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911082119416_populateGenresTablewithDatainUpmethod.resx">
+      <DependentUpon>201911082119416_populateGenresTablewithDatainUpmethod.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
