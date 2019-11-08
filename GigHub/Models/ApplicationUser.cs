@@ -18,16 +18,5 @@ namespace GigHub.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
-        public ApplicationDbContext()
-            : base("GigHub_DB", throwIfV1Schema: false)
-        {
-        }
 
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
-    }
 }
