@@ -1,0 +1,28 @@
+﻿@model GigHub.Models.GigViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Gigs</h2>
+
+<form>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Venue)
+        @Html.TextBoxFor(model => model.Venue, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Time)
+        @Html.TextBoxFor(model => model.Time, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Date)
+        @Html.TextBoxFor(model => model.Date, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Genre)
+        @Html.DropDownListFor(model => model.Genre, new SelectList(Model.Genres, "ID", "Name"), "Select Genre", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
