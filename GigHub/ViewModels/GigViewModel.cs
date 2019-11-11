@@ -1,10 +1,10 @@
-﻿using System;
+﻿using GigHub.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
-namespace GigHub.Models
+
+namespace GigHub.ViewModels
 {
     public class GigViewModel
     {
@@ -14,10 +14,12 @@ namespace GigHub.Models
 
         [Required(ErrorMessageResourceType = typeof(Resources.ValidationMessages),
             ErrorMessageResourceName = "RequiredMessage")]
+        [ValidTime]
         public string Time { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Resources.ValidationMessages),
             ErrorMessageResourceName = "RequiredMessage")]
+        [FutureDate]
         public string Date { set; get; }
 
         [Required(ErrorMessageResourceType = typeof(Resources.ValidationMessages),
@@ -28,12 +30,9 @@ namespace GigHub.Models
 
 
         //as Single Responsibility we create method that make parsing of date time because it not belong to controller
-        public DateTime DateTime
+        public DateTime GetDateTime()
         {
-            get
-            {
-                return DateTime.Parse(string.Format("{0} {1}", Date, Time));
-            }
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
     }
 }

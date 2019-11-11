@@ -212,7 +212,8 @@
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\GigViewModel.cs" />
+    <Compile Include="ViewModels\FutureDate.cs" />
+    <Compile Include="ViewModels\GigViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\LabelsText.Designer.cs">
@@ -226,6 +227,7 @@
       <DependentUpon>ValidationMessages.resx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
