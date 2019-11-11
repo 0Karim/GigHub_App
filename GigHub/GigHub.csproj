@@ -190,6 +190,22 @@
     <Compile Include="Migrations\201911082119416_populateGenresTablewithDatainUpmethod.Designer.cs">
       <DependentUpon>201911082119416_populateGenresTablewithDatainUpmethod.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911112002546_changeApplicationUserToArtistId.cs" />
+    <Compile Include="Migrations\201911112002546_changeApplicationUserToArtistId.Designer.cs">
+      <DependentUpon>201911112002546_changeApplicationUserToArtistId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911112015470_AddForignKeyPropertiesToGig.cs" />
+    <Compile Include="Migrations\201911112015470_AddForignKeyPropertiesToGig.Designer.cs">
+      <DependentUpon>201911112015470_AddForignKeyPropertiesToGig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911112036454_AddForignKeyPropertiesToGig_RemoveGenre.cs" />
+    <Compile Include="Migrations\201911112036454_AddForignKeyPropertiesToGig_RemoveGenre.Designer.cs">
+      <DependentUpon>201911112036454_AddForignKeyPropertiesToGig_RemoveGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911112040329_ChangeGenreIdTypetoByteAndInGigModel.cs" />
+    <Compile Include="Migrations\201911112040329_ChangeGenreIdTypetoByteAndInGigModel.Designer.cs">
+      <DependentUpon>201911112040329_ChangeGenreIdTypetoByteAndInGigModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -199,6 +215,16 @@
     <Compile Include="Models\GigViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\LabelsText.Designer.cs">
+      <DependentUpon>LabelsText.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\ValidationMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationMessages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +313,26 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911082119416_populateGenresTablewithDatainUpmethod.resx">
       <DependentUpon>201911082119416_populateGenresTablewithDatainUpmethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911112002546_changeApplicationUserToArtistId.resx">
+      <DependentUpon>201911112002546_changeApplicationUserToArtistId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911112015470_AddForignKeyPropertiesToGig.resx">
+      <DependentUpon>201911112015470_AddForignKeyPropertiesToGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911112036454_AddForignKeyPropertiesToGig_RemoveGenre.resx">
+      <DependentUpon>201911112036454_AddForignKeyPropertiesToGig_RemoveGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911112040329_ChangeGenreIdTypetoByteAndInGigModel.resx">
+      <DependentUpon>201911112040329_ChangeGenreIdTypetoByteAndInGigModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LabelsText.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LabelsText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ValidationMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

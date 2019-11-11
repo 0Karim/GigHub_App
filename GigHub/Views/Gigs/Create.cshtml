@@ -5,24 +5,32 @@
 
 <h2>Gigs</h2>
 
-<form>
+@using (Html.BeginForm("AddGig", "Gigs"))
+{
+    @Html.ValidationSummary()
     <div class="form-group">
         @Html.LabelFor(model => model.Venue)
         @Html.TextBoxFor(model => model.Venue, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Venue)
     </div>
     <div class="form-group">
         @Html.LabelFor(model => model.Time)
         @Html.TextBoxFor(model => model.Time, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Time)
     </div>
     <div class="form-group">
         @Html.LabelFor(model => model.Date)
         @Html.TextBoxFor(model => model.Date, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Date)
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.Genre)
-        @Html.DropDownListFor(model => model.Genre, new SelectList(Model.Genres, "ID", "Name"), "Select Genre", new { @class = "form-control" })
+        @Html.LabelFor(model => model.GenreId)
+        @Html.DropDownListFor(model => model.GenreId, new SelectList(Model.Genres, "ID", "Name"), GigHub.Resources.LabelsText.DropDown_SelectLabel, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.GenreId)
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
     </div>
-</form>
+}
+
+
