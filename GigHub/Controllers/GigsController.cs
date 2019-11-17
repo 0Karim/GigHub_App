@@ -28,6 +28,7 @@ namespace GigHub.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken] // to prevent CSRF Attack
         public ActionResult AddGig(GigViewModel model)
         {
             if (!ModelState.IsValid)
