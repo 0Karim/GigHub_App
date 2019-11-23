@@ -1,34 +1,41 @@
 ﻿@model GigHub.ViewModels.GigViewModel
 @{
-    ViewBag.Title = "Create";
+                /**/
+
+                ViewBag.Title = "Create";
 }
 
 <h2>Gigs</h2>
 
 @using (Html.BeginForm("AddGig", "Gigs"))
 {
-    @Html.ValidationSummary()
+    <p class="alert alert-info">All fields are <strong>required</strong>.</p>
+    @*@Html.ValidationSummary()*@
     @Html.AntiForgeryToken()
     <div class="form-group">
         @Html.LabelFor(model => model.Venue)
-        @Html.TextBoxFor(model => model.Venue, new { @class = "form-control" })
+        @Html.TextBoxFor(model => model.Venue, new { @class = "form-control", autofocus = "autofocus" })
         @Html.ValidationMessageFor(model => model.Venue)
     </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.Time)
-        @Html.TextBoxFor(model => model.Time, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Time)
-    </div>
+    
     <div class="form-group">
         @Html.LabelFor(model => model.Date)
-        @Html.TextBoxFor(model => model.Date, new { @class = "form-control" })
+        @Html.TextBoxFor(model => model.Date, new { @class = "form-control" , placeholder="eg 1 Jan 2019" })
         @Html.ValidationMessageFor(model => model.Date)
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Time)
+        @Html.TextBoxFor(model => model.Time, new { @class = "form-control", placeholder = "eg 20:00" })
+        @Html.ValidationMessageFor(model => model.Time)
+    </div>
+
     <div class="form-group">
         @Html.LabelFor(model => model.GenreId)
         @Html.DropDownListFor(model => model.GenreId, new SelectList(Model.Genres, "ID", "Name"), GigHub.Resources.LabelsText.DropDown_SelectLabel, new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.GenreId)
     </div>
+
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
     </div>
