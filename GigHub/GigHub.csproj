@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201911112040329_ChangeGenreIdTypetoByteAndInGigModel.Designer.cs">
       <DependentUpon>201911112040329_ChangeGenreIdTypetoByteAndInGigModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911241859198_AddNameToApplicationUser.cs" />
+    <Compile Include="Migrations\201911241859198_AddNameToApplicationUser.Designer.cs">
+      <DependentUpon>201911241859198_AddNameToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -327,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911112040329_ChangeGenreIdTypetoByteAndInGigModel.resx">
       <DependentUpon>201911112040329_ChangeGenreIdTypetoByteAndInGigModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911241859198_AddNameToApplicationUser.resx">
+      <DependentUpon>201911241859198_AddNameToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\LabelsText.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
